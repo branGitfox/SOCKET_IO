@@ -25,4 +25,12 @@ io.on('connection', (socket) => {
     socket.on('chat', (msg) => {
         io.emit('chat', msg)
     })
+
+    socket.on('typing', (msg) => {
+        io.emit('typing', msg)
+    })
+
+    socket.on('notTyping', (msg) => {
+        io.emit('notTyping', msg)
+    })
 })
