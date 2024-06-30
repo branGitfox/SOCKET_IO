@@ -9,6 +9,18 @@
     .messages > li:nth-child(odd) {
         background-color: blue;
     }
+
+    .messages {
+        width: 400px;
+        max-width: 400px;
+        height: 400px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        border: solid;
+        padding: 10px;
+    }
+
+
 </style>
 <body>
         <div class="container">
@@ -39,6 +51,7 @@
             const item = document.createElement('li')
             item.textContent = msg
             messages.appendChild(item)
+            messages.scrollTo(0, messages.scrollHeight)
         })
 
 
